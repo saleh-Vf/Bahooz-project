@@ -1,0 +1,233 @@
+@font-face {
+    font-family: 'iran-sans';
+    src: url("fonts/iran_sans/IRANSans_Medium.ttf");
+    font-family: 'iran-sans-num';
+    src: url("fonts/iran_sans/IRANSans\(FaNum\)_Medium.ttf");
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: iran-sans, iran-sans-num;
+}
+
+:root {
+    --mainWhite: #fafafa;
+    --normal-text: #7C7A89;
+    --main-green: #159F91;
+    --light-green: #DEF2F1;
+}
+
+body {
+    background-color: var(--bodyColor);
+    height: 10000px;
+}
+
+.menu-test {
+    width: 100%;
+    height: 200px;
+    background-color: rebeccapurple;
+}
+
+.short-menu-cont {
+    margin: 30px 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.short-menu-cont>ul {
+    display: flex;
+    list-style-type: none;
+    column-gap: 1rem;
+}
+
+.short-menu-cont>ul>li {
+    padding: 10px 10px;
+    color: var(--normal-text);
+}
+
+.short-menu-cont>ul>li:hover {
+    color: var(--mainWhite);
+    border-radius: 20px;
+    background-color: var(--normal-text);
+    cursor: pointer;
+}
+
+.short-menu-cont>ul>li:first-child {
+    padding: 10px 30px;
+    background-color: var(--main-green);
+    border-radius: 20px;
+    color: var(--mainWhite);
+}
+
+.short-menu-cont>ul>li:first-child:hover {
+    background-color: #118b7f;
+}
+
+section.main-page-cont {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+div.main-page {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+    /* background-color: antiquewhite; */
+}
+
+section.suggestion-cont {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    column-gap: 3vw;
+}
+
+.image-suggestion-cont>img {
+    height: 27vw;
+}
+
+.about-suggestion-cont {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+}
+
+.mini-title {
+    color: var(--main-green);
+}
+
+div.more-cont {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+}
+
+.btn-more-cont {
+    position: absolute;
+    right: 0;
+    width: 101%;
+    padding: 10px;
+}
+
+button.btn-more {
+    border: none;
+    background-color: var(--main-green);
+    opacity: 80%;
+    color: var(--mainWhite);
+    padding: 9px 15px;
+    border-radius: 20px 5px 20px 20px;
+    cursor: pointer;
+}
+
+button.btn-more:hover {
+    opacity: 1;
+}
+
+p.more {
+    /* line-height: 40px; */
+    text-align: justify;
+    height: 200px;
+    overflow: hidden;
+}
+
+.profile-cont {
+    display: flex;
+    column-gap: 0.2rem;
+}
+
+.image-profile-cont>img {
+    width: 50px;
+    border-radius: 50%;
+}
+
+.left-profile- {
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* todo                       end suggestion */
+
+section.content-cont {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    column-gap: 0.5rem;
+    row-gap: 1rem;
+}
+
+.content {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+    padding: 10px;
+    border-radius: 15px;
+}
+
+.content:hover {
+    box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
+}
+
+.image-content>img {
+    width: 100%;
+    border-radius: 15px;
+}
+
+
+/* todo                       end content              */
+
+div.page-number-cont {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+ul.page-number {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 0.5rem;
+}
+
+ul.page-number>li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style-type: none;
+    width: 35px;
+    height: 35px;
+    /* background-color: var(--light-green); */
+    color: var(--normal-text);
+    border-radius: 50%;
+}
+
+ul.page-number>li:hover:not(.hover-none) {
+    background-color: var(--main-green);
+    color: var(--mainWhite);
+    cursor: pointer;
+}
+
+
+/* todo                 end  number  */
+
+
+/*?                           medi                     */
+
+@media (max-width:768px) {
+    section.suggestion-cont {
+        flex-direction: column;
+    }
+    .image-suggestion-cont {
+        width: 100%;
+        text-align: center;
+    }
+}
